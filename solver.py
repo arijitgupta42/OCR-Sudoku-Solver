@@ -112,9 +112,6 @@ for i, row in enumerate(puzzle):
             #the preprocessing happens inside the predict call
             template[i][j] = model.predict_classes(image.reshape(1,28,28,1) \
                                                    .astype('float32')/255)[0]
-            
-
-
 show_board(template)
 start =time.time()
 if solve(template):
